@@ -23,18 +23,23 @@ jobs:
       with:
         flutter-version: '2.2.3'
     
-    - name: Use Source code folder
-      uses: ./lib
+
     - name: Install dependencies
       run: flutter pub get
+      working-directory: ./
     - name: Format code
       run: flutter format --set-exit-if-changed .
+      working-directory: ./
     - name: Static analysis
       run: flutter analyze
+      working-directory: ./
     - name: Flutter tests
       run: flutter test
+      working-directory: ./lib
     - name: Flutter build Android
       run: flutter build apk
+      working-directory: ./
     - name: Flutter build iOS
       run: flutter build ios --release --no-codesign
+      working-directory: ./
 
