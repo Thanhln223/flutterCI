@@ -35,7 +35,7 @@ jobs:
       working-directory: ./
     - name: Flutter tests
       run: flutter test
-      working-directory: ./lib
+      working-directory: ./
     - name: Flutter build Android
       run: flutter build apk
       working-directory: ./
