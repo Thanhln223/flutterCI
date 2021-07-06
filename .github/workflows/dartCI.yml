@@ -23,9 +23,9 @@ jobs:
       with:
         flutter-version: '2.2.3'
     
-    - name: Go to source code
-      run: cd lib
+ 
     - name: Install dependencies
+      run: cd lib
       run: flutter pub get
     - name: Format code
       run: flutter format --set-exit-if-changed .
